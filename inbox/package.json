@@ -6,13 +6,15 @@
   "scripts": {
     "test": "mocha 'tests/**/*.js'",
     "compile:test": "node compile.js",
-    "compile:build": "npx solcjs --abi contracts/Inbox.sol && npx solcjs --bin contracts/Inbox.sol"
+    "compile:build": "npx solcjs --abi contracts/Inbox.sol && npx solcjs --bin contracts/Inbox.sol",
+    "deploy": "node deploy.js"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.2.1",
+    "dotenv": "^8.2.0",
     "ganache-cli": "^6.12.2",
     "mocha": "^8.2.1",
     "solc": "^0.8.0",
