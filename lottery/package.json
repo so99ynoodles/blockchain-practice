@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha 'tests/**/*.js'",
     "compile:test": "node compile.js",
-    "compile:build": "npx solcjs --abi contracts/Inbox.sol && npx solcjs --bin contracts/Inbox.sol",
+    "compile:build": "npx solcjs --abi contracts/Lottery.sol && npx solcjs --bin contracts/Lottery.sol",
     "deploy": "node deploy.js"
   },
   "keywords": [],
