@@ -1,9 +1,10 @@
 import Web3 from "web3";
 
 const ethEnabled = () => {
-  if (window.ethereum) {
-    window.web3 = new Web3(window.ethereum);
-    window.ethereum.enable();
+  const ethereum = (window as any).ethereum;
+  if (ethereum) {
+    (window as any).web3 = new Web3(ethereum);
+    ethereum.enable();
     return true;
   }
   return false;
@@ -15,4 +16,4 @@ if (!ethEnabled()) {
   );
 }
 
-export default window.web3;
+export default (window as any).web3 as Web3;
