@@ -11,9 +11,6 @@ const provider = new HDWalletProvider({
 const web3 = new Web3(provider);
 const ONE_MILLION = "1000000";
 const DEFAULT_MESSAGE = "Hello World";
-const DEFAULT_MESSAGE_BYTES_32 = web3.utils
-  .fromAscii(DEFAULT_MESSAGE)
-  .padEnd(66, "0");
 
 const deploy = async () => {
   const accounts = await web3.eth.getAccounts();
@@ -21,7 +18,7 @@ const deploy = async () => {
   const result = await new web3.eth.Contract(abi)
     .deploy({
       data: evm.bytecode.object,
-      arguments: [DEFAULT_MESSAGE_BYTES_32],
+      arguments: [DEFAULT_MESSAGE],
     })
     .send({ from: accounts[0], gas: ONE_MILLION });
 

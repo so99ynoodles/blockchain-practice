@@ -3,13 +3,13 @@
 pragma solidity ^0.8.0;
 
 contract Inbox {
-    bytes32 public message;
+    string public message;
 
-    constructor (bytes32 _message) {
+    constructor (string memory _message) {
         message = _message;
     }
 
-    function setMessage(bytes32 newMessage) public {
+    function setMessage(string memory newMessage) public {
         message = newMessage;
     }
 }
