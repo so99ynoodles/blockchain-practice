@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha 'tests/**/*.js'",
+    "compile:test": "node compile.js",
+    "compile:build": "npx solcjs --abi contracts/Inbox.sol && npx solcjs --bin contracts/Inbox.sol",
+    "deploy": "node deploy.js"
   },
   "keywords": [],
   "author": "",
