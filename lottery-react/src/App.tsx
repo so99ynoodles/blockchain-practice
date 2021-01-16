@@ -1,22 +1,13 @@
 import React from "react";
+import { ChakraProvider, Container, Heading } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ChakraProvider>
+      <Container p={8}>
+        <Heading as="h1">Hello World</Heading>
+      </Container>
+    </ChakraProvider>
   );
 }
 
