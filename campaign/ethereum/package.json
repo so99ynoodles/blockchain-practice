@@ -1,12 +1,11 @@
 {
-  "name": "campaign",
+  "name": "campaign-ethereum",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha 'tests/**/*.js'",
-    "compile:test": "node compile.js",
-    "compile:build": "npx solcjs --abi contracts/Campaign.sol && npx solcjs --bin contracts/Campaign.sol",
+    "compile": "node compile.js",
     "deploy": "node deploy.js"
   },
   "keywords": [],
@@ -15,6 +14,7 @@
   "dependencies": {
     "@truffle/hdwallet-provider": "^1.2.1",
     "dotenv": "^8.2.0",
+    "fs-extra": "^0.30.0",
     "ganache-cli": "^6.12.2",
     "mocha": "^8.2.1",
     "solc": "^0.8.0",
