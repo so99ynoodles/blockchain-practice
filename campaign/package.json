@@ -1,0 +1,23 @@
+{
+  "name": "campaign",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'tests/**/*.js'",
+    "compile:test": "node compile.js",
+    "compile:build": "npx solcjs --abi contracts/Campaign.sol && npx solcjs --bin contracts/Campaign.sol",
+    "deploy": "node deploy.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@truffle/hdwallet-provider": "^1.2.1",
+    "dotenv": "^8.2.0",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^8.2.1",
+    "solc": "^0.8.0",
+    "web3": "^1.3.1"
+  }
+}
