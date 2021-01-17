@@ -6,7 +6,7 @@ contract Lottery {
     address public manager;
     address payable[] public players;
 
-    constructor () public {
+    constructor () {
         manager = msg.sender;
     }
 
