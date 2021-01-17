@@ -3,8 +3,13 @@ const fs = require("fs-extra");
 const solc = require("solc");
 
 const contract = "Campaign.sol";
-const campaignPath = path.resolve(process.cwd(), "contracts", contract);
-const buildPath = path.resolve(process.cwd(), "build");
+const campaignPath = path.resolve(
+  process.cwd(),
+  "ethereum",
+  "contracts",
+  contract
+);
+const buildPath = path.resolve(process.cwd(), "ethereum", "build");
 fs.removeSync(buildPath);
 
 const content = fs.readFileSync(campaignPath, "utf-8");

@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha 'tests/**/*.js'",
-    "compile": "node compile.js",
-    "deploy": "node deploy.js"
+    "test:ethereum": "mocha 'ethereum/tests/**/*.js'",
+    "compile:ethereum": "node ethereum/compile.js",
+    "deploy:ethereum": "node ethereum/deploy.js"
   },
   "keywords": [],
   "author": "",
