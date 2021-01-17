@@ -9,7 +9,7 @@ const provider = new HDWalletProvider({
   providerOrUrl: process.env.API_ENDPOINT,
 });
 const web3 = new Web3(provider);
-const ONE_MILLION = "1000000";
+const THREE_MILLION = "3000000";
 
 const deploy = async () => {
   const accounts = await web3.eth.getAccounts();
@@ -18,7 +18,7 @@ const deploy = async () => {
     .deploy({
       data: evm.bytecode.object,
     })
-    .send({ from: accounts[0], gas: ONE_MILLION });
+    .send({ from: accounts[0], gas: THREE_MILLION });
 
   console.log("Contract successfully deployed to ", result.options.address);
 };
